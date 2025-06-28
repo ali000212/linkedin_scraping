@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/api/proxy",
+      "methods": ["POST"],
+      "dest": "/api/proxy.cjs"
+    },
+    {
+      "src": "/api/openai-proxy",
+      "methods": ["POST"],
+      "dest": "/api/openai-proxy.cjs"
+    }
+  ],
+  "functions": {
+    "api/**/*.cjs": {
+      "runtime": "@vercel/node@3.0.0"
+    }
+  }
+}
